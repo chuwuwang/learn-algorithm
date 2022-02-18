@@ -1,4 +1,4 @@
-package sort;
+package com.algorithm.sort;
 
 /**
  * 快速排序
@@ -6,14 +6,20 @@ package sort;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] array = {
-                1, 5, 6, 4, 1, 9, 7, 3, 5, 2
-        };
+        int[] array = { 1, 5, 6, 4, 1, 9, 7, 3, 5, 2 };
         QuickSort quickSort = new QuickSort();
         int[] sort = quickSort.quickSort(array);
         for (int i = 0; i < sort.length; i++) {
             System.out.print(sort[i] + " ");
         }
+    }
+
+    public int[] quickSort(int[] array) {
+        if (array == null || array.length == 0) return array;
+
+        quickSort(array, 0, array.length - 1);
+
+        return array;
     }
 
     // the real index for pivot
@@ -38,14 +44,6 @@ public class QuickSort {
         return i;
     }
 
-    public int[] quickSort(int[] array) {
-        if (array == null || array.length == 0) return array;
-
-        quickSort(array, 0, array.length - 1);
-
-        return array;
-    }
-
     private void quickSort(int[] array, int left, int right) {
         // base case
         if (left >= right) return;
@@ -62,6 +60,5 @@ public class QuickSort {
         array[i] = array[j];
         array[j] = temp;
     }
-
 
 }

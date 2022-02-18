@@ -1,4 +1,4 @@
-package binary;
+package com.algorithm.search;
 
 /**
  * 找数组中距离最近得一个元素
@@ -6,11 +6,9 @@ package binary;
 public class FindClosest {
 
     public static void main(String[] args) {
-        int[] array = {
-                1, 2, 2, 2, 4, 6, 8, 8, 10
-        };
+        int[] array = { 1, 2, 2, 2, 4, 6, 8, 8, 10 };
         int index = new FindClosest().findClosest(array, 7);
-        System.out.println("index:" + index);
+        System.out.println("index: " + index);
     }
 
     /**

@@ -1,4 +1,4 @@
-package binary;
+package com.algorithm.search;
 
 /**
  * array: m * n
@@ -9,20 +9,20 @@ public class SearchMatrix {
 
     public static void main(String[] args) {
         int[][] matrix = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9},
-                {10, 11, 12}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 },
+                { 10, 11, 12 }
         };
         int[] index = new SearchMatrix().searchMatrix(matrix, 7);
-        System.out.println("index:" + index[0] + " " + index[1]);
+        System.out.println("index: " + index[0] + " " + index[1]);
     }
 
     /**
      * O(Log2 M x N) O(1)
      */
     public int[] searchMatrix(int[][] matrix, int target) {
-        int[] res = {-1, -1};
+        int[] res = { -1, -1 };
         int num_row = matrix.length;
         int num_col = matrix[0].length;
         int left = 0;

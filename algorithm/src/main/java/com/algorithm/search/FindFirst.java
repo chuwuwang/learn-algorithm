@@ -1,13 +1,13 @@
-package binary;
+package com.algorithm.search;
 
 // 查找元素出现的第一个位置
 
 public class FindFirst {
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 2, 2, 10};
+        int[] array = { 1, 2, 2, 2, 10 };
         int index = new FindFirst().findFirst(array, 2);
-        System.out.println("index:" + index);
+        System.out.println("index: " + index);
     }
 
     /**

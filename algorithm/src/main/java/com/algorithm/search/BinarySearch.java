@@ -1,4 +1,4 @@
-package binary;
+package com.algorithm.search;
 
 // target 6
 // 1  3  4  5  6  10
@@ -9,14 +9,16 @@ package binary;
 
 // 查找指定元素的位置
 
+/**
+ * 二分查找法
+ */
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int[] array = {
-                1, 3, 4, 5, 6, 10
-        };
+        int[] array = { 1, 3, 4, 5, 6, 10 };
         int index = new BinarySearch().binarySearch(array, 5);
-        System.out.println("index:" + index);
+        // int index = new BinarySearch().binarySearchRecur(array, 5, 0, 5);
+        System.out.println("index: " + index);
     }
 
     /**
@@ -41,7 +43,7 @@ public class BinarySearch {
 
     public int binarySearchRecur(int[] array, int target, int left, int right) {
         // base case
-        if (left > right) return left;
+        if (left > right) return -1;
 
         int mid = left + (right - left) / 2;
         if (array[mid] < target) {
