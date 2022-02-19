@@ -2,6 +2,7 @@ package com.algorithm.sort;
 
 /**
  * 快速排序
+ * 时间复杂度为 O (N * LogN)
  */
 public class QuickSort {
 
