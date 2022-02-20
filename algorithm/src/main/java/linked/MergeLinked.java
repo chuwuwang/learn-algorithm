@@ -5,6 +5,8 @@ package linked;
 // L2 = 1 --> 2 --> 5 --> null
 // merge L1 to L2  1 --> 1 --> 2 --> 4 --> 5 --> 6 --> null
 
+import com.algorithm.linked.ListNode;
+
 // 两个链表的合并
 public class MergeLinked {
 

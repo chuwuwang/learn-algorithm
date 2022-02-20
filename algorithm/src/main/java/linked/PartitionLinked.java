@@ -1,5 +1,7 @@
 package linked;
 
+import com.algorithm.linked.ListNode;
+
 public class PartitionLinked {
 
     public static void main(String[] args) {

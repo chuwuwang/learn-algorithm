@@ -1,4 +1,4 @@
-package stack;
+package com.algorithm.stack;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -8,8 +8,20 @@ import java.util.LinkedList;
  */
 public class MinStack {
 
-    private Deque<Integer> min = new LinkedList<>();
-    private Deque<Integer> stack = new LinkedList<>();
+    public static void main(String[] args) {
+        MinStack stack = new MinStack();
+        stack.push(5);
+        stack.push(38);
+        stack.push(10);
+        stack.push(2);
+        stack.push(6);
+        stack.push(1);
+        Integer min = stack.min();
+        System.out.println(min);
+    }
+
+    private final Deque<Integer> min = new LinkedList<>();
+    private final Deque<Integer> stack = new LinkedList<>();
 
     public boolean isEmpty() {
         return stack.isEmpty();
@@ -31,7 +43,7 @@ public class MinStack {
         boolean bool = stack.isEmpty();
         if (bool) return null;
         int t = stack.pop();
-        if (min.peek() == t) {
+        if (min.peek() != null && min.peek() == t) {
             min.pop();
         }
         return t;
@@ -54,6 +66,5 @@ public class MinStack {
         if (bool) return null;
         return min.peek();
     }
-
 
 }

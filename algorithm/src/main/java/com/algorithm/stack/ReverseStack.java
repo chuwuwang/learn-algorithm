@@ -1,4 +1,4 @@
-package stack;
+package com.algorithm.stack;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -15,8 +15,7 @@ public class ReverseStack {
         items.push("saw");
         items.push("a");
         items.push("hello");
-        reverseStack(items);    // now he is at the top
-
+        new ReverseStack().reverseStack(items);    // now he is at the top
         // print in order pushed:
         while (items.size() > 0) {
             String obj = items.pop();
@@ -24,7 +23,7 @@ public class ReverseStack {
         }
     }
 
-    public static void reverseStack(Stack<String> stack) {
+    public void reverseStack(Stack<String> stack) {
         Queue<String> rev = new LinkedList<>();
         while (stack.size() > 0) {
             String obj = stack.pop();
@@ -35,6 +34,5 @@ public class ReverseStack {
             stack.push(obj);
         }
     }
-
 
 }

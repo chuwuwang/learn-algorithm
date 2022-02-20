@@ -6,6 +6,8 @@ package linked;
 // Q1: How to find  the middle node of a linked list ?
 // N1 --> N2 --> N3 --> N4 --> N5 --> N6 --> NULL
 
+import com.algorithm.linked.ListNode;
+
 public class MiddleLinked {
 
     public ListNode getMiddle(ListNode head) {

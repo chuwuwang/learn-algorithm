@@ -4,6 +4,8 @@ package linked;
 // Q4: Insert a node in a sorted linked list(simple)
 //         1 --> 3 --> 6 --> 9 --> null target == 7
 
+import com.algorithm.linked.ListNode;
+
 public class InsertLinked {
 
     public static void main(String[] args) {

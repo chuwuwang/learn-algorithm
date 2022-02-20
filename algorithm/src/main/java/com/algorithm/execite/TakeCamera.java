@@ -1,4 +1,4 @@
-package exe;
+package com.algorithm.execite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,6 @@ import java.util.List;
 public class TakeCamera {
 
     public static void main(String[] args) {
-
         List<People> list = new ArrayList<>();
         People people = new People("Tom", 188);
         list.add(people);
@@ -55,7 +54,6 @@ public class TakeCamera {
         list.add(people);
         people = new People("John", 159);
         list.add(people);
-
         new TakeCameraSort().sort(3, list);
     }
 }
@@ -144,6 +142,7 @@ class TakeCameraSort {
     /**
      * 获取最大值
      */
+    @SuppressWarnings("DuplicatedCode")
     private People max(List<People> peoples) {
         People max = peoples.get(0);
         for (People p : peoples) {
@@ -161,6 +160,7 @@ class TakeCameraSort {
     /**
      * 获取最小值
      */
+    @SuppressWarnings("DuplicatedCode")
     private People min(List<People> peoples) {
         People min = peoples.get(0);
         for (People p : peoples) {
@@ -178,14 +178,11 @@ class TakeCameraSort {
 }
 
 class People {
-
     String name;
     int height;
     int temp;   // 临时位置
-
     public People(String name, int height) {
         this.name = name;
         this.height = height;
     }
-
 }

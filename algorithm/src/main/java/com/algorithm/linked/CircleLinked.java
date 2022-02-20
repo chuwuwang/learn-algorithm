@@ -1,4 +1,4 @@
-package linked;
+package com.algorithm.linked;
 
 // 判断一个LinkedList是否有环
 
